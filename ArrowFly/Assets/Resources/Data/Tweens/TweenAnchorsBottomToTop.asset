@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0261ea7ec5cf70e44b4e34515a0117f5, type: 3}
+  m_Name: TweenAnchorsBottomToTop
+  m_EditorClassIdentifier: 
+  _screenAnchors:
+    InAnchorMin: {x: 0, y: 0}
+    InAnchorMax: {x: 1, y: 1}
+    OutAnchorMin: {x: 0, y: 0}
+    OutAnchorMax: {x: 1, y: 0}
