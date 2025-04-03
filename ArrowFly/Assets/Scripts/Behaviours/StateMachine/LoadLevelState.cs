@@ -9,7 +9,7 @@ namespace Behaviours
     {
         private ILevelLoader _levelLoader;
         private Launcher _launcher;
-        private ArrowTorque _arrowTorque;
+        private ArcherController _archer;
 
         public LoadLevelState(GameStateController stateController) : base(stateController)
         {
@@ -24,7 +24,7 @@ namespace Behaviours
         private async UniTaskVoid LoadAll()
         {
             await LoadTask(LoadLevelBehaviours);
-            await LoadTask(LoadBowAndArrow);
+            await LoadTask(LoadArcher);
             await LoadTask(StartGameState);
         }
 
@@ -37,10 +37,10 @@ namespace Behaviours
         {
             _levelLoader.LoadLevelByIndex(0);
         }
-        private void LoadBowAndArrow()
+        private void LoadArcher()
         {
-            _arrowTorque =  GameObject.Instantiate(Services.Instance.DataResourcePrefabs.ServicesObject.GetArrow());
-            _launcher = GameObject.Instantiate(Services.Instance.DataResourcePrefabs.ServicesObject.GetLauncher());
+            _archer = GameObject.Instantiate(Services.Instance.DataResourcePrefabs.ServicesObject.GetArcher());
+            Services.Instance.Archer.SetObject(_archer);
         }
         private void StartGameState()
         {

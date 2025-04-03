@@ -18,9 +18,16 @@ namespace Helpers
             base(capacityPool, poolTransform)
         {
             _objectPool = new Dictionary<TPoolableObject, HashSet<IPoolable>>();
+            _poolablesList = new List<TPoolableObject>();
             _poolObject = poolObject;
         }
 
+        public override IPoolable GetObject()
+        {
+            IPoolable result;
+            result = GetAllObjects(GetListObject(_poolObject));
+            return result;
+        }
         public override IPoolable GetObject(TPoolableObject poolable)
         {
             IPoolable result;

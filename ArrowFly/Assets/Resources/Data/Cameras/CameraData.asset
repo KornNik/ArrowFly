@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b550c6aec342d745acec860dd99b3e2, type: 3}
   m_Name: CameraData
   m_EditorClassIdentifier: 
-  _mainCameraPosition: {x: 0, y: 0, z: -15}
+  _mainCameraPosition: {x: 0, y: 0, z: -13}

@@ -17,6 +17,7 @@ MonoBehaviour:
   _levelsBundle: {fileID: 11400000, guid: 964a45c24c10e364484133a4be74c56a, type: 2}
   _bow: {fileID: 5818205968360501314, guid: aed98a594e56d6040afbf718f1e4c73e, type: 3}
   _arrow: {fileID: 3151712414507618013, guid: 26ac736ef57eb524c94eac24cd1a1374, type: 3}
+  _archer: {fileID: 6020913952517405044, guid: 7cd9e825dbbc1df48b3d6a6bbc9a8dc7, type: 3}
   _screensPrefabs:
     m_keys: 0100000002000000040000000300000005000000
     m_values:

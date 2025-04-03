@@ -15,7 +15,7 @@ namespace Helpers
             _capacityPool = capacityPool;
             _poolTransform = poolTransform;
         }
-
+        public abstract IPoolable GetObject();
         public abstract IPoolable GetObject(TPoolableObject poolableType);
 
         protected virtual void ReturnToPool(Transform transform)

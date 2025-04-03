@@ -15,7 +15,7 @@ D:/Work/GitPrograms/ArrowFly/ArrowFly
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-55812
+49847
 Successfully changed project path to: D:/Work/GitPrograms/ArrowFly/ArrowFly
 D:/Work/GitPrograms/ArrowFly/ArrowFly
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ D:/Work/GitPrograms/ArrowFly/ArrowFly
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19344] Host "[IP] 192.168.0.104 [Port] 0 [Flags] 2 [Guid] 2181750004 [EditorId] 2181750004 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8F0045J) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [18172] Host "[IP] 192.168.0.104 [Port] 0 [Flags] 2 [Guid] 980242074 [EditorId] 980242074 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8F0045J) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [19344] Host "[IP] 192.168.0.104 [Port] 0 [Flags] 2 [Guid] 2181750004 [EditorId] 2181750004 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8F0045J) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [18172] Host "[IP] 192.168.0.104 [Port] 0 [Flags] 2 [Guid] 980242074 [EditorId] 980242074 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8F0045J) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 243.79 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 259.34 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
@@ -67,94 +67,153 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56512
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56164
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.034273 seconds.
+Registered in 0.024831 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 225.08 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 262.03 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.627 seconds
+- Completed reload, in  1.519 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1629ms)
-		BeginReloadAssembly (191ms)
+	ReloadAssembly (1520ms)
+		BeginReloadAssembly (167ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (1141ms)
-			LoadAssemblies (182ms)
+		EndReloadAssembly (1097ms)
+			LoadAssemblies (162ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (234ms)
+			SetupTypeCache (219ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (61ms)
-			SetupLoadedEditorAssemblies (716ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (706ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (145ms)
+				InitializePlatformSupportModulesInManaged (130ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (225ms)
+				RefreshPlugins (262ms)
 				BeforeProcessingInitializeOnLoad (3ms)
-				ProcessInitializeOnLoadAttributes (224ms)
-				ProcessInitializeOnLoadMethodAttributes (118ms)
+				ProcessInitializeOnLoadAttributes (210ms)
+				ProcessInitializeOnLoadMethodAttributes (101ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.021817 seconds.
+Registered in 0.021534 seconds.
 Begin MonoManager ReloadAssembly
-An ADB process has shut down when we were accessing it, the following System.Threading.ThreadAbortException has been thrown: Thread was being aborted..
+Symbol file LoadedFromMemory doesn't match image D:\Work\GitPrograms\ArrowFly\ArrowFly\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Work\GitPrograms\ArrowFly\ArrowFly\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 220.99 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 255.52 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.190 seconds
+- Completed reload, in  2.992 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3192ms)
-		BeginReloadAssembly (372ms)
+	ReloadAssembly (2994ms)
+		BeginReloadAssembly (339ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
+			DisableScriptedObjects (12ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (142ms)
-		EndReloadAssembly (2520ms)
-			LoadAssemblies (219ms)
+			CreateAndSetChildDomain (140ms)
+		EndReloadAssembly (2394ms)
+			LoadAssemblies (198ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (835ms)
+			SetupTypeCache (668ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (115ms)
-			SetupLoadedEditorAssemblies (1252ms)
+			RebuildScriptCaches (145ms)
+			SetupLoadedEditorAssemblies (1278ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (40ms)
+				InitializePlatformSupportModulesInManaged (36ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (221ms)
-				BeforeProcessingInitializeOnLoad (239ms)
-				ProcessInitializeOnLoadAttributes (657ms)
-				ProcessInitializeOnLoadMethodAttributes (58ms)
-				AfterProcessingInitializeOnLoad (35ms)
+				RefreshPlugins (256ms)
+				BeforeProcessingInitializeOnLoad (245ms)
+				ProcessInitializeOnLoadAttributes (643ms)
+				ProcessInitializeOnLoadMethodAttributes (74ms)
+				AfterProcessingInitializeOnLoad (23ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (21ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
-Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.32 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4014 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 30 unused Assets / (56.2 KB). Loaded Objects now: 4479.
-Memory consumption went from 140.7 MB to 140.7 MB.
-Total: 2.316900 ms (FindLiveObjects: 0.168400 ms CreateObjectMapping: 0.085600 ms MarkObjects: 2.009000 ms  DeleteObjects: 0.053300 ms)
+Unloading 4932 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (1.5 MB). Loaded Objects now: 5379.
+Memory consumption went from 193.2 MB to 191.7 MB.
+Total: 3.046300 ms (FindLiveObjects: 0.215600 ms CreateObjectMapping: 0.117600 ms MarkObjects: 2.209400 ms  DeleteObjects: 0.502900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016813 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Work\GitPrograms\ArrowFly\ArrowFly\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Work\GitPrograms\ArrowFly\ArrowFly\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.448 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2449ms)
+		BeginReloadAssembly (272ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (70ms)
+		EndReloadAssembly (1955ms)
+			LoadAssemblies (207ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (652ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (99ms)
+			SetupLoadedEditorAssemblies (885ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (53ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (174ms)
+				ProcessInitializeOnLoadAttributes (557ms)
+				ProcessInitializeOnLoadMethodAttributes (75ms)
+				AfterProcessingInitializeOnLoad (24ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.48 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4629 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 214 unused Assets / (24.8 KB). Loaded Objects now: 5197.
+Memory consumption went from 178.9 MB to 178.9 MB.
+Total: 7.618900 ms (FindLiveObjects: 0.606600 ms CreateObjectMapping: 0.289100 ms MarkObjects: 6.581000 ms  DeleteObjects: 0.140200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -168,100 +227,151 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 11724.723019 seconds.
-  path: Assets/Resources/PlayerInputs.inputactions
-  artifactKey: Guid(35b8233ec8d8f664896faf660eb38ea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/PlayerInputs.inputactions using Guid(35b8233ec8d8f664896faf660eb38ea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fbd2cdf1abfbf35a2f29f94ea0f27bb') in 0.087308 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 423.123304 seconds.
+  Time since last request: 579.830031 seconds.
   path: Assets/Archer/point.png
   artifactKey: Guid(cee05aa11185e994580d95379fb520e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/point.png using Guid(cee05aa11185e994580d95379fb520e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34642895dd5519e30cc8b1d405643e10') in 0.087129 seconds 
+Start importing Assets/Archer/point.png using Guid(cee05aa11185e994580d95379fb520e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '791e8960447ff78bd4823c671b433c45') in 0.199238 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 27.952893 seconds.
-  path: Assets/Archer/Animation/archer/archer/arrow.png
-  artifactKey: Guid(a9da9112d54e7324ca4ad66f2d173f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/arrow.png using Guid(a9da9112d54e7324ca4ad66f2d173f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9b0bee016824b140f819d8189af63c3') in 0.029778 seconds 
+  Time since last request: 1.449632 seconds.
+  path: Assets/Archer/Animation/Archer_Json/archer_Material.mat
+  artifactKey: Guid(bc5f370955fd367419e350232405f1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Archer/Animation/Archer_Json/archer_Material.mat using Guid(bc5f370955fd367419e350232405f1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'Spine/Skeleton': Couldn't open include file 'CGIncludes/Spine-Common.cginc'. at line 44
+
+Compiling Subshader: 0, Pass: Normal, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_COLORSPACE_GAMMA UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING _STRAIGHT_ALPHA_INPUT
+Shader error in 'Spine/Skeleton': Couldn't open include file 'CGIncludes/Spine-Common.cginc'. at line 44
+
+Compiling Subshader: 0, Pass: Normal, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_COLORSPACE_GAMMA UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING _STRAIGHT_ALPHA_INPUT
+Tried select unknown importer for id '-2' '00000000000000000000000000000000'
+ -> (artifact id: '569629623a1af09009869cd9b8817186') in 0.211256 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017469 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Work\GitPrograms\ArrowFly\ArrowFly\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Work\GitPrograms\ArrowFly\ArrowFly\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.403 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2405ms)
+		BeginReloadAssembly (266ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (67ms)
+		EndReloadAssembly (1916ms)
+			LoadAssemblies (206ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (634ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (88ms)
+			SetupLoadedEditorAssemblies (890ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (53ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (175ms)
+				ProcessInitializeOnLoadAttributes (558ms)
+				ProcessInitializeOnLoadMethodAttributes (77ms)
+				AfterProcessingInitializeOnLoad (24ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.66 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4636 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 29 unused Assets / (24.9 KB). Loaded Objects now: 5251.
+Memory consumption went from 182.0 MB to 181.9 MB.
+Total: 5.919800 ms (FindLiveObjects: 0.600900 ms CreateObjectMapping: 0.291700 ms MarkObjects: 4.983200 ms  DeleteObjects: 0.042300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Archer/Animation/archer/archer/body.png
-  artifactKey: Guid(413b8ede1f0d5784882fd8bfbf45a8d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/body.png using Guid(413b8ede1f0d5784882fd8bfbf45a8d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3596d11630679a1ee9ae3e00003adeed') in 0.033141 seconds 
+  Time since last request: 246.819961 seconds.
+  path: Assets/Archer 1/point.png
+  artifactKey: Guid(242bebf3934cfda49a82b81d8efd7c08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Archer 1/point.png using Guid(242bebf3934cfda49a82b81d8efd7c08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '787b1e842a2fe178d04c7fe84f102e08') in 0.090203 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Archer/Animation/archer/archer/bow.png
-  artifactKey: Guid(ec2863683b65a514f80c7e49b0cbb69f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/bow.png using Guid(ec2863683b65a514f80c7e49b0cbb69f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ada961a3e01b0f088a860d70dfe9c0') in 0.029280 seconds 
+  Time since last request: 1.478275 seconds.
+  path: Assets/Archer 1/Animation/Archer_Json/archer_bullet.png
+  artifactKey: Guid(5ba1a9782a67b4d4ea7db9a2b4c00345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Archer 1/Animation/Archer_Json/archer_bullet.png using Guid(5ba1a9782a67b4d4ea7db9a2b4c00345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8084e22080d018d106782ae4aa0946e') in 0.021074 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.364590 seconds.
-  path: Assets/Archer/Animation/archer/archer/arm.png
-  artifactKey: Guid(1c413c31788b83947b9f6337174a0296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/arm.png using Guid(1c413c31788b83947b9f6337174a0296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22026ff09cbc9a64a7bf4541acc83847') in 0.036413 seconds 
+  Time since last request: 6.882928 seconds.
+  path: Assets/Archer 1/Animation/archer/archer/arrow.png
+  artifactKey: Guid(e91935d6c573168439b9ded1b52249d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Archer 1/Animation/archer/archer/arrow.png using Guid(e91935d6c573168439b9ded1b52249d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67973c0905fdfe5ccb043a895c546b62') in 0.026252 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.063325 seconds.
+  path: Assets/Archer 1/Animation/archer/archer/bow.png
+  artifactKey: Guid(e03f3b722ba8b964ba1ff63b9141de64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Archer 1/Animation/archer/archer/bow.png using Guid(e03f3b722ba8b964ba1ff63b9141de64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dad036e61d6adf32559740e87811d4d') in 0.097487 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Archer 1/Animation/archer/archer/bow2.png
+  artifactKey: Guid(b345b3565d6724b41be726dc17e9d7a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Archer 1/Animation/archer/archer/bow2.png using Guid(b345b3565d6724b41be726dc17e9d7a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b2ad8f5c12a9c45984176273b2a475e') in 0.032956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Archer 1/Animation/archer/archer/body.png
+  artifactKey: Guid(abaec04ad6579264c88ec90cfa38077a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Archer 1/Animation/archer/archer/body.png using Guid(abaec04ad6579264c88ec90cfa38077a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5002497563a44399bdca8a7923daa9cc') in 0.031674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.323743 seconds.
+  path: Assets/Archer 1/Animation/archer/archer/splash/splash_0001.png
+  artifactKey: Guid(d84da7e6452af5d468f968cb5a8603d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Archer 1/Animation/archer/archer/splash/splash_0001.png using Guid(d84da7e6452af5d468f968cb5a8603d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeef37ff9b0555268a5ae2395ce7ac05') in 0.011231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Archer 1/Animation/archer/archer/splash/splash_0006.png
+  artifactKey: Guid(3101a4ee8eee31145bfa1e4b6be534ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Archer 1/Animation/archer/archer/splash/splash_0006.png using Guid(3101a4ee8eee31145bfa1e4b6be534ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f612d4c446b225c18ef216826bc6197') in 0.011148 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Archer 1/Animation/archer/archer/splash/splash_0003.png
+  artifactKey: Guid(374b09daf0be9904ca5bb7bec9b66511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Archer 1/Animation/archer/archer/splash/splash_0003.png using Guid(374b09daf0be9904ca5bb7bec9b66511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f4d64d9e9f6636b32cf112fd25424d1') in 0.011689 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Archer 1/Animation/archer/archer/splash/splash_0005.png
+  artifactKey: Guid(a8329e2d95e005646b904403068c81cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Archer 1/Animation/archer/archer/splash/splash_0005.png using Guid(a8329e2d95e005646b904403068c81cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7785ee3d09b2d6c725f9741f5eca40a1') in 0.011216 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000046 seconds.
-  path: Assets/Archer/Animation/archer/archer/body.png
-  artifactKey: Guid(413b8ede1f0d5784882fd8bfbf45a8d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/body.png using Guid(413b8ede1f0d5784882fd8bfbf45a8d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c93eeb0f25cf246a023f6bb304323159') in 0.017687 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Archer/Animation/archer/archer/bow.png
-  artifactKey: Guid(ec2863683b65a514f80c7e49b0cbb69f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/bow.png using Guid(ec2863683b65a514f80c7e49b0cbb69f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cff1305905cec96d5829b72bd3533a27') in 0.020722 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Archer/Animation/archer/archer/arrow.png
-  artifactKey: Guid(a9da9112d54e7324ca4ad66f2d173f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/arrow.png using Guid(a9da9112d54e7324ca4ad66f2d173f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f0436ac74639b3dc1b1d3336a04ad33') in 0.019264 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.814915 seconds.
-  path: Assets/Archer/Animation/archer/archer/splash/splash_0002.png
-  artifactKey: Guid(8c6cc2e4eb5b0ae4c8ff98f3f15aeb12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/splash/splash_0002.png using Guid(8c6cc2e4eb5b0ae4c8ff98f3f15aeb12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b754a2be87272adfe85e5ef9a48ee4') in 0.019826 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Archer/Animation/archer/archer/splash/splash_0006.png
-  artifactKey: Guid(f2245504cddf9b3468357e070d81f2d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/splash/splash_0006.png using Guid(f2245504cddf9b3468357e070d81f2d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cc7cf5fe1e68f261337358bd4ba9c11') in 0.020708 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/Archer/Animation/archer/archer/splash/splash_0009.png
-  artifactKey: Guid(c7936740b88e14849aaff33d02ef3ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/splash/splash_0009.png using Guid(c7936740b88e14849aaff33d02ef3ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e08543b5bd377dff5626ee8fea5b8ebb') in 0.020146 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Archer/Animation/archer/archer/splash/splash_0008.png
-  artifactKey: Guid(3b0205238f55d2e44be448129a7eba7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/splash/splash_0008.png using Guid(3b0205238f55d2e44be448129a7eba7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee04fa4546e7a267aa9913cc3abe1a5d') in 0.020826 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.822616 seconds.
-  path: Assets/Archer/Animation/archer/archer/splash/splash_0002.png
-  artifactKey: Guid(8c6cc2e4eb5b0ae4c8ff98f3f15aeb12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/splash/splash_0002.png using Guid(8c6cc2e4eb5b0ae4c8ff98f3f15aeb12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f515361240c5f2ac7626aac5edd47237') in 0.082384 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.008645 seconds.
-  path: Assets/Archer/Animation/archer/archer/splash/splash_0009.png
-  artifactKey: Guid(c7936740b88e14849aaff33d02ef3ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/splash/splash_0009.png using Guid(c7936740b88e14849aaff33d02ef3ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bafb567e96cf1490cc77fb120c91041') in 0.080975 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.007757 seconds.
-  path: Assets/Archer/Animation/archer/archer/splash/splash_0008.png
-  artifactKey: Guid(3b0205238f55d2e44be448129a7eba7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Archer/Animation/archer/archer/splash/splash_0008.png using Guid(3b0205238f55d2e44be448129a7eba7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cebc0a8ded1b39c864409d80603f5f2') in 0.045896 seconds 
+  path: Assets/Archer 1/Animation/archer/archer/splash/splash_0004.png
+  artifactKey: Guid(8bf5ef4303aa26048bff75efde96be3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Archer 1/Animation/archer/archer/splash/splash_0004.png using Guid(8bf5ef4303aa26048bff75efde96be3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46961262eb933f627e4dbdb9002bfb2e') in 0.011047 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
