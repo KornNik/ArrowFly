@@ -7,9 +7,11 @@ namespace Behaviours
     sealed class ExitLevelState : BaseState
     {
         private ILevelLoader _levelLoader;
+        private ICharacterLoader _characterLoader;
         public ExitLevelState(GameStateController stateController) : base(stateController)
         {
             _levelLoader = Services.Instance.LevelLoader.ServicesObject;
+            _characterLoader = Services.Instance.PlayerLoader.ServicesObject;
         }
         public override void EnterState()
         {
@@ -20,6 +22,8 @@ namespace Behaviours
         private async UniTaskVoid DeleteAll()
         {
             await LoadTask(DeleteLevel);
+            await LoadTask(DeleteArcher);
+            await LoadTask(StartGameState);
         }
         private async UniTask LoadTask(Action loadingAction)
         {
@@ -29,6 +33,10 @@ namespace Behaviours
         private void DeleteLevel()
         {
             _levelLoader.ClearLevelFull();
+        }
+        private void DeleteArcher()
+        {
+            _characterLoader.DeleteCharacter();
         }
         private void StartGameState()
         {

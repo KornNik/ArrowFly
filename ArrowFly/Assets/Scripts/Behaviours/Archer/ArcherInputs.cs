@@ -31,10 +31,6 @@ namespace Behaviours
             var isPressedThisFrame = _inputs.PlayerActionList[InputActionManager.DRAW].WasPressedThisFrame();
             var isReleasedThisFrame = _inputs.PlayerActionList[InputActionManager.DRAW].WasReleasedThisFrame();
 
-            Debug.Log($"isInProgress = {isInProgress} isPressed = {isPressed} " +
-                $"isPerformedThisFrame = {isPerformedThisFrame} isPressedThisFrame = {isPressedThisFrame} " +
-                $"isReleasedThisFrame = {isReleasedThisFrame}");
-
             if (isPerformedThisFrame)
             {
                 PerformDraw?.Invoke();

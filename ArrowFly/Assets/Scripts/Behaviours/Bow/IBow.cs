@@ -4,7 +4,6 @@ namespace Behaviours
 {
     interface IBow
     {
-        void Rotate();
         void OnStartDrawBow();
         void OnHoldDraw(Vector2 startMousePosition, Vector2 endMousePosition);
         void OnReleaseDraw();

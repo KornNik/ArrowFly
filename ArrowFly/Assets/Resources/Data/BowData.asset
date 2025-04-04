@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: BowData
   m_EditorClassIdentifier: 
   _launchForce: 0.1
+  _startDrawAudioClip: {fileID: 8300000, guid: 51f0c54706b53c14c9c24bbd63bb18a6, type: 3}
+  _releaseDrawAudioClip: {fileID: 8300000, guid: 51f0c54706b53c14c9c24bbd63bb18a6, type: 3}

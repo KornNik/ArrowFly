@@ -6,19 +6,16 @@ namespace Behaviours
     sealed class ArrowAnimation : MonoBehaviour
     {
         [SerializeField] private SkeletonAnimation _skeletonAnimation;
-        [SerializeField] private ArrowTorque _arrow;
+        [SerializeField] private Arrow _arrow;
 
         [SpineAnimation]
         public string _exploedAnimation;
         [SpineAnimation]
         public string _idleAnimation;
 
-        private void Awake()
-        {
-            _skeletonAnimation.AnimationState.SetAnimation(0, _idleAnimation, true);
-        }
         private void OnEnable()
         {
+            _skeletonAnimation.AnimationState.SetAnimation(0, _idleAnimation, true);
             _arrow.IsCollision += OnCollideExploed;
         }
         private void OnDisable()
@@ -29,7 +26,6 @@ namespace Behaviours
         private void OnCollideExploed()
         {
             _skeletonAnimation.AnimationState.SetAnimation(0, _exploedAnimation, false);
-            _skeletonAnimation.AnimationState.AddAnimation(0, _idleAnimation, true, 0f);
         }
     }
 }

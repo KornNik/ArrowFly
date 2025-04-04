@@ -8,56 +8,52 @@ namespace Behaviours
     [Serializable]
     struct IKTransforms
     {
-        public Transform LeftHand;
-        public Transform RightHand;
-        public Transform ChestTarget;
+        public Transform AimTarget;
     }
     sealed class Launcher : MonoBehaviour, IBow
     {
         [SerializeField] private Transform _spawnPoint;
-        [SerializeField] private ArrowTorque _arrowPrefab;
+        [SerializeField] private Arrow _arrowPrefab;
         [SerializeField] private LineRenderer _lineRenderer;
         [SerializeField] private BowData _data;
         [SerializeField] private IKTransforms _ikTargets;
 
         private LineDrawer _lineDrawer;
         private Vector2 _velocity;
-        private CertainPool<ArrowTorque> _arrowPool;
-        private ArrowTorque _currentHoldArrow;
+        private CertainPool<Arrow> _arrowPool;
+        private Arrow _currentHoldArrow;
+        private ProjectileTorque _projectileTorque;
 
         public IKTransforms IkTargets => _ikTargets;
 
         private void Awake()
         {
+            _projectileTorque = new ProjectileTorque(transform);
             _lineDrawer = new LineDrawer(_lineRenderer, _spawnPoint);
-            _arrowPool = new CertainPool<ArrowTorque>(3, _spawnPoint, _arrowPrefab);
+            _arrowPool = new CertainPool<Arrow>(3, _spawnPoint, _arrowPrefab);
         }
 
         public void OnStartDrawBow()
         {
-            _currentHoldArrow = _arrowPool.GetObject() as ArrowTorque;
-            _currentHoldArrow.ActiveObject();
+            _currentHoldArrow = _arrowPool.GetObject() as Arrow;
+            MakeSoundEvent.Trigger(new SoundEventInfo(_data.StartDrawAudioClip, transform.position));
         }
         public void OnHoldDraw(Vector2 startMousePosition, Vector2 endMousePosition)
         {
             var dragValue = (startMousePosition - endMousePosition);
             _velocity = dragValue * _data.LaunchForce;
             _lineDrawer.DrawTrajectory(_velocity);
-            Rotate();
+            _projectileTorque.SetAngle(_velocity);
         }
         public void OnReleaseDraw()
         {
             _lineDrawer.ClearLine();
+            MakeSoundEvent.Trigger(new SoundEventInfo(_data.ReleaseDrawAudioClip, transform.position));
         }
         public void ThrowArrow()
         {
             if (_currentHoldArrow == null) { return; }
             _currentHoldArrow.Throw(_velocity);
-        }
-        public void Rotate()
-        {
-            float angle = Mathf.Atan2(_velocity.y, _velocity.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
 }

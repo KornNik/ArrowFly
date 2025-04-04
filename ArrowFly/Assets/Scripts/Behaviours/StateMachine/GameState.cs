@@ -3,10 +3,11 @@ using UI;
 
 namespace Behaviours
 {
-    sealed class GameState : BaseState, IEventSubscription
+    sealed class GameState : BaseState
     {
         private ArcherInputs _inputs;
         private ArcherController _controller;
+        private SetupInputsActions _setupInputsActions;
 
         public GameState(GameStateController stateController) : base(stateController)
         {
@@ -16,44 +17,24 @@ namespace Behaviours
         public override void EnterState()
         {
             _controller = Services.Instance.Archer.ServicesObject;
+            _setupInputsActions = new SetupInputsActions(_inputs, _controller);
             ScreenInterface.GetInstance().Execute(ScreenTypes.GameMenu);
-            Subscribe();
+            _setupInputsActions.Subscribe();
         }
 
         public override void ExitState()
         {
-            Unsubscribe();
+            _setupInputsActions.Unsubscribe();
         }
 
         public override void LogicFixedUpdate()
         {
+
         }
 
         public override void LogicUpdate()
         {
             _inputs.UpdateInputs();
-        }
-
-        public void Subscribe()
-        {
-            _inputs.PerformDraw += _controller.Model.Animation.OnStartDraw;
-            _inputs.InProgressDraw += _controller.Model.Animation.OnBowDraw;
-            _inputs.ReleasDraw += _controller.Model.Animation.OnDrawRelease;
-
-            _inputs.DrawDragValue += _controller.Model.Bow.OnHoldDraw;
-            _inputs.ReleasDraw += _controller.Model.Bow.OnReleaseDraw;
-            _inputs.PerformDraw += _controller.Model.Bow.OnStartDrawBow;
-        }
-
-        public void Unsubscribe()
-        {
-            _inputs.PerformDraw -= _controller.Model.Animation.OnStartDraw;
-            _inputs.InProgressDraw -= _controller.Model.Animation.OnBowDraw;
-            _inputs.ReleasDraw -= _controller.Model.Animation.OnDrawRelease;
-
-            _inputs.DrawDragValue -= _controller.Model.Bow.OnHoldDraw;
-            _inputs.ReleasDraw -= _controller.Model.Bow.OnReleaseDraw;
-            _inputs.PerformDraw -= _controller.Model.Bow.OnStartDrawBow;
         }
     }
 }

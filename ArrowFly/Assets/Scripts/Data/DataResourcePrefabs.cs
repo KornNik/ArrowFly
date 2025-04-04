@@ -12,7 +12,7 @@ namespace Data
         [SerializeField] private GameStateBehaviour _gameStatePrefab;
         [SerializeField] private LevelsBundle _levelsBundle;
         [SerializeField] private Launcher _bow;
-        [SerializeField] private ArrowTorque _arrow;
+        [SerializeField] private Arrow _arrow;
         [SerializeField] private ArcherController _archer;
 
         [SerializeField] private SerializableDictionary<ScreenTypes, GameObject> _screensPrefabs;
@@ -52,7 +52,7 @@ namespace Data
         {
             return _bow;
         }
-        public ArrowTorque GetArrow()
+        public Arrow GetArrow()
         {
             return _arrow;
         }

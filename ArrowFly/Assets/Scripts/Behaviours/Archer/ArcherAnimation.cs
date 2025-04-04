@@ -23,24 +23,16 @@ namespace Behaviours
         [SerializeField, SpineEvent]
         private string _drawReleaseEvent;
         [SerializeField,SpineBone(dataField: "skeletonAnimation")]
-        private string _rightHandIkBone;
-        [SerializeField, SpineBone(dataField: "skeletonAnimation")]
-        private string _leftHandIkBone;
-        [SerializeField, SpineBone(dataField: "skeletonAnimation")]
-        private string _chestIkBone;
+        private string __targetIkBone;
 
         private EventData _releaseEventData;
-        private Bone _rightHandBone;
-        private Bone _leftHandBone;
-        private Bone _chestBone;
+        private Bone _targetBone;
 
         private void Awake()
         {
             _releaseEventData = _skeletonAnimation.skeleton.Data.FindEvent(_drawReleaseEvent);
             _skeletonAnimation.AnimationState.SetAnimation(0, _idleAnimation, true);
-            _rightHandBone = _skeletonAnimation.Skeleton.FindBone(_rightHandIkBone);
-            _leftHandBone = _skeletonAnimation.Skeleton.FindBone(_leftHandIkBone);
-            _chestBone = _skeletonAnimation.Skeleton.FindBone(_chestIkBone);
+            _targetBone = _skeletonAnimation.Skeleton.FindBone(__targetIkBone);
         }
         private void OnEnable()
         {
@@ -50,33 +42,32 @@ namespace Behaviours
         {
             _skeletonAnimation.AnimationState.Event -= HandleEvent;
         }
-        void Update()
+        private void Update()
         {
-            var skeletonSpacePointRight = _skeletonAnimation.transform.InverseTransformPoint(_model.IkTargets.RightHand.position);
+            var skeletonSpacePointRight = _model.IkTargets.AimTarget.position;
             skeletonSpacePointRight.x *= _skeletonAnimation.Skeleton.ScaleX;
             skeletonSpacePointRight.y *= _skeletonAnimation.Skeleton.ScaleY;
-            _rightHandBone.SetLocalPosition(skeletonSpacePointRight);
-            var skeletonSpacePointLeft = _skeletonAnimation.transform.InverseTransformPoint(_model.IkTargets.LeftHand.position);
-            skeletonSpacePointLeft.x *= _skeletonAnimation.Skeleton.ScaleX;
-            skeletonSpacePointLeft.y *= _skeletonAnimation.Skeleton.ScaleY;
-            _leftHandBone.SetLocalPosition(skeletonSpacePointLeft);
-            var skeletonSpacePointChest = _skeletonAnimation.transform.InverseTransformPoint(_model.IkTargets.ChestTarget.position);
-            skeletonSpacePointChest.x *= _skeletonAnimation.Skeleton.ScaleX;
-            skeletonSpacePointChest.y *= _skeletonAnimation.Skeleton.ScaleY;
-            _chestBone.SetLocalPosition(skeletonSpacePointChest);
+            _targetBone.SetLocalPosition(skeletonSpacePointRight);
+        }
+        public void OnStartDraw()
+        { 
+            var shootTrack = _skeletonAnimation.AnimationState.SetAnimation(2, _begginAttackAnimation, false);
+            shootTrack.AttachmentThreshold = 1f;
+            shootTrack.MixDuration = 0f;
         }
         public void OnBowDraw()
         {
-            _skeletonAnimation.AnimationState.SetAnimation(0, _attackDrawAnimation, true);
-        }
-        public void OnStartDraw()
-        {
-            _skeletonAnimation.AnimationState.SetAnimation(0, _begginAttackAnimation, false);
+
+            var drawTrack = _skeletonAnimation.AnimationState.SetAnimation(1, _attackDrawAnimation, true);
+            drawTrack.AttachmentThreshold = 1f;
+            drawTrack.MixDuration = 0f;
         }
         public void OnDrawRelease()
         {
-            _skeletonAnimation.AnimationState.SetAnimation(0, _endAttackAnimation, false);
-            _skeletonAnimation.AnimationState.AddAnimation(0, _idleAnimation, true,0);
+            var empty2 = _skeletonAnimation.state.AddEmptyAnimation(2, 0.5f, 0.1f);
+            empty2.AttachmentThreshold = 1f;
+            _skeletonAnimation.AnimationState.SetAnimation(1, _endAttackAnimation, false);
+            _skeletonAnimation.AnimationState.AddAnimation(1, _idleAnimation, true,0);
         }
 
         private void HandleEvent(TrackEntry trackEntry, Spine.Event e)
@@ -84,7 +75,7 @@ namespace Behaviours
             bool eventMatch = (_releaseEventData == e.Data); // Performance recommendation: Match cached reference instead of string.
             if (eventMatch) 
             {
-                _model.Bow.ThrowArrow();
+                _model.Combat.Attack();
             }
         }
     }

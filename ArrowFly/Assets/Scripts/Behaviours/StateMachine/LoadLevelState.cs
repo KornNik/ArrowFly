@@ -1,19 +1,18 @@
 ﻿using Helpers;
 using System;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 namespace Behaviours
 {
     sealed class LoadLevelState : BaseState
     {
         private ILevelLoader _levelLoader;
-        private Launcher _launcher;
-        private ArcherController _archer;
+        private ICharacterLoader _characterLoader;
 
         public LoadLevelState(GameStateController stateController) : base(stateController)
         {
             _levelLoader = Services.Instance.LevelLoader.ServicesObject;
+            _characterLoader = Services.Instance.PlayerLoader.ServicesObject;
         }
 
         public override void EnterState()
@@ -39,8 +38,7 @@ namespace Behaviours
         }
         private void LoadArcher()
         {
-            _archer = GameObject.Instantiate(Services.Instance.DataResourcePrefabs.ServicesObject.GetArcher());
-            Services.Instance.Archer.SetObject(_archer);
+            _characterLoader.LoadCharacter();
         }
         private void StartGameState()
         {

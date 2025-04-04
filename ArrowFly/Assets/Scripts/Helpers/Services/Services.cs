@@ -16,6 +16,7 @@ namespace Helpers
         public Service<Camera> CameraService { get; private set; }
         public Service<DatasBundle> DatasBundle { get; private set; }
         public Service<ILevelLoader> LevelLoader { get; private set; }
+        public Service<ICharacterLoader> PlayerLoader { get; private set; }
         public Service<IAudioPlayer> AudioPlayer { get; private set; }
         public Service<ITimeController> TimeController { get; private set; }
         public Service<GameStateBehaviour> GameStateBehavior { get; private set; }
@@ -40,6 +41,7 @@ namespace Helpers
             SettingsController = new Service<ISettingsController>();
             DataResourcePrefabs = new Service<DataResourcePrefabs>();
             Archer = new Service<ArcherController>();
+            PlayerLoader = new Service<ICharacterLoader>();
         }
 
     }
