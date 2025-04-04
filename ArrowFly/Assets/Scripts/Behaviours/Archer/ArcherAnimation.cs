@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Spine;
 using Spine.Unity;
 
 namespace Behaviours
@@ -22,32 +21,21 @@ namespace Behaviours
         private string _attackDrawAnimation;
         [SerializeField, SpineEvent]
         private string _drawReleaseEvent;
-        [SerializeField,SpineBone(dataField: "skeletonAnimation")]
-        private string __targetIkBone;
 
-        private EventData _releaseEventData;
-        private Bone _targetBone;
+        private AnimationEventHandler _animationEventHandler;
 
         private void Awake()
         {
-            _releaseEventData = _skeletonAnimation.skeleton.Data.FindEvent(_drawReleaseEvent);
+            _animationEventHandler = new AnimationEventHandler(_model, _skeletonAnimation, _drawReleaseEvent);
             _skeletonAnimation.AnimationState.SetAnimation(0, _idleAnimation, true);
-            _targetBone = _skeletonAnimation.Skeleton.FindBone(__targetIkBone);
         }
         private void OnEnable()
         {
-            _skeletonAnimation.AnimationState.Event += HandleEvent;
+            _animationEventHandler.Subscribe();
         }
         private void OnDisable()
         {
-            _skeletonAnimation.AnimationState.Event -= HandleEvent;
-        }
-        private void Update()
-        {
-            var skeletonSpacePointRight = _model.IkTargets.AimTarget.position;
-            skeletonSpacePointRight.x *= _skeletonAnimation.Skeleton.ScaleX;
-            skeletonSpacePointRight.y *= _skeletonAnimation.Skeleton.ScaleY;
-            _targetBone.SetLocalPosition(skeletonSpacePointRight);
+            _animationEventHandler.Unsubscribe();
         }
         public void OnStartDraw()
         { 
@@ -68,15 +56,6 @@ namespace Behaviours
             empty2.AttachmentThreshold = 1f;
             _skeletonAnimation.AnimationState.SetAnimation(1, _endAttackAnimation, false);
             _skeletonAnimation.AnimationState.AddAnimation(1, _idleAnimation, true,0);
-        }
-
-        private void HandleEvent(TrackEntry trackEntry, Spine.Event e)
-        {
-            bool eventMatch = (_releaseEventData == e.Data); // Performance recommendation: Match cached reference instead of string.
-            if (eventMatch) 
-            {
-                _model.Combat.Attack();
-            }
         }
     }
 }
